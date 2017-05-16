@@ -11,7 +11,7 @@ s = np.sin(t)
 z = np.cos(t)
 #计算正弦函数值
 pl.plot(t, s, label='sin')
-pl.plot(t, s, label='cos')
+pl.plot(t, z, label='cos')
 pl.xlabel('x', fontproperties='Arial', fontsize=24)
 #设置x标签
 pl.ylabel('y', fontproperties='Arial', fontsize=24)
