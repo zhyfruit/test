@@ -13,9 +13,9 @@ entryName=tkinter.Entry(root,width=120,textvariable=varName)
 entryName.place(x=70,y=5,width=120,height=20)
 labelGrade=tkinter.Label(root,text="用餐人数",justify=tkinter.RIGHT,width=50)
 labelGrade.place(x=10,y=40,width=50,height=20)
-studentClasses={'1':['鱼香肉丝','宫保鸡丁','水煮肉片','溜肥肠'],
-                '2':['米饭','面条','包子'],
-                '3':['毛血旺','酸辣土豆丝','凉拌藕片']}
+studentClasses={'1':['鱼香肉丝','宫保鸡丁','水煮肉片','溜肥肠','米饭','面条','包子','毛血旺','酸辣土豆丝','凉拌藕片'],
+                '2':['鱼香肉丝','宫保鸡丁','水煮肉片','溜肥肠','米饭','面条','包子','毛血旺','酸辣土豆丝','凉拌藕片'],
+                '3':['鱼香肉丝','宫保鸡丁','水煮肉片','溜肥肠','米饭','面条','包子','毛血旺','酸辣土豆丝','凉拌藕片']}
 comboGrade=tkinter.ttk.Combobox(root,values=tuple(studentClasses.keys()),width=50)
 comboGrade.place(x=70,y=40,width=50,height=20)
 def comboChange(event):
@@ -44,9 +44,9 @@ checkSmoker.place(x=20,y=100,width=100,height=20)
 
 def addInformation():
     result='姓名: '+entryName.get()
-    result=result+';用餐人数：'+comboGrade.get()
-    result=result+';点菜明细：'+comboClass.get()
-    result=result+';菜品辣度：'+('正常' if sex.get() else '不辣')
+    result=result+';用餐人数：'+comboGrade.get()+' '
+    result=result+';点菜明细：'+comboClass.get()+' '
+    result=result+';菜品辣度：'+('正常' if sex.get() else '不辣')+' '
     result=result+';是否吸烟：'+('是' if smoker.get() else '否')
     listboxStudents.insert(0,result)
 buttonAdd=tkinter.Button(root,text="增加",width=40,command=addInformation)
