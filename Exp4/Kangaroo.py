@@ -14,18 +14,16 @@ class Kangaroo(object):
     """a Kangaroo is a marsupial"""
     
     def __init__(self, contents=None):
-        """initialize the pouch contents; the default value is
-        an empty list"""
+        #将[]改为None
         if contents == None:
             contents=[]
         self.pouch_contents = contents
 
     def __str__(self):
-        """return a string representaion of this Kangaroo and
-        the contents of the pouch, with one item per line"""
         t = [ object.__str__(self) + ' with pouch contents:' ]
         for obj in self.pouch_contents:
             s = '    ' + str(obj)
+            #将object.__str__(obj)改为str(obj)
             t.append(s)
         return '\n'.join(t)
 
