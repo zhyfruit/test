@@ -24,18 +24,23 @@ def count_matches(students, samples):
             count += 1
     return count
 
-num_students = input("请输入学生数：")
-num_students = int(num_students)
-num_simulations = 1000
-p=0
-start=time.time()
-count = count_matches(num_students, num_simulations)
-P=count  / 1000
-print(time.time()-start)
+# num_students = input("请输入学生数：")
+# num_students = int(num_students)
+# num_simulations = 1000
+# p=0
+# start=time.time()
+# count = count_matches(num_students, num_simulations)
+# P=count  / 1000
+# print(time.time()-start)
 
-print('在 %d 次模拟后' % num_simulations)
-print('共有 %d 个学生参与模拟实验' % num_students)
-print('共有 %d 次模拟中至少有两个学生生日在同一天' % count)
-print('相同生日的概率估计为:%lf' % P)
+# print('在 %d 次模拟后' % num_simulations)
+# print('共有 %d 个学生参与模拟实验' % num_students)
+# print('共有 %d 次模拟中至少有两个学生生日在同一天' % count)
+# print('相同生日的概率估计为:%lf' % P)
 
-
+import numpy as np
+import matplotlib.pyplot as plt
+x = np.arange(1,100)
+y = plt.plot(count_matches(x, 1000)/1000)
+plt.legend()
+plt.show()
