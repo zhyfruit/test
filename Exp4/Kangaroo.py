@@ -10,7 +10,7 @@ you DO NOT want to emulate this example!
 
 """
 
-class Kangaroo(object):
+class Kangaroo(object):u
     """a Kangaroo is a marsupial"""
     
     def __init__(self, contents=None):
